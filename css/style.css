@@ -1,9 +1,10 @@
 :root {
   --dark: #212529;
   --light: #f8f9fa;
+  --light-opacity: rgba(248, 249, 250, 0.4);
   --accent: #fd7e14;
   --dark-accent: #e8590c;
-  --dark-opacity: rgba(33, 37, 41, 0.85);
+  --dark-opacity: rgba(33, 37, 41, 0.9);
   --bg-gradient: linear-gradient(135deg, #5f3dc4, #748ffc);
 }
 
@@ -50,6 +51,14 @@ body {
   flex: 1;
 }
 
+.flex-row-center {
+  align-items: center;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -62,6 +71,19 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 90rem;
+}
+
+.body-box {
+  background: var(--dark);
+  padding: 4.8rem;
+  border-radius: 12px;
+  color: var(--light);
+  line-height: 120%;
+}
+@media (max-width: 25em) {
+  .body-box {
+    padding: 3rem 2rem;
+  }
 }
 
 .header {
@@ -81,15 +103,48 @@ body {
   color: inherit;
 }
 
+.btn-icon {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  transition: all 0.5s;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: var(--dark);
+  background: var(--accent);
+}
+.btn-icon:hover {
+  color: var(--accent);
+  background: transparent;
+}
+.btn-icon:hover svg {
+  transform: rotate(90deg);
+}
+.btn-icon svg {
+  width: 3rem;
+  fill: currentColor;
+  pointer-events: none;
+  transition: transform 0.5s;
+}
+
 .convertBU {
   padding: 4rem 0;
 }
-.convertBU__body {
-  background: var(--dark);
-  padding: 4.8rem;
-  border-radius: 12px;
-  color: var(--light);
-  line-height: 120%;
+.convertBU__heading {
+  gap: 2.4rem;
+}
+.convertBU__heading:not(:last-child) {
+  margin-bottom: 4.8rem;
+}
+@media (max-width: 25em) {
+  .convertBU__heading:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
 }
 .convertBU__title {
   font-size: 3.2rem;
@@ -97,8 +152,10 @@ body {
   color: var(--accent);
   font-weight: 700;
 }
-.convertBU__title:not(:last-child) {
-  margin-bottom: 4.8rem;
+@media (max-width: 37.5em) {
+  .convertBU__title {
+    font-size: 2.4rem;
+  }
 }
 
 .form {
@@ -128,8 +185,18 @@ body {
   width: 5rem;
   fill: currentColor;
 }
+@media (max-width: 25em) {
+  .form__icon svg {
+    width: 4rem;
+  }
+}
+.form__link {
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 2px solid currentColor;
+}
 .form__btn {
-  border: none;
+  border: 4px solid transparent;
   background: var(--accent);
   padding: 1.8rem;
   font-weight: 500;
@@ -140,6 +207,71 @@ body {
   color: var(--dark);
   transition: all 0.5s;
 }
+@media (max-width: 25em) {
+  .form__btn {
+    margin-top: unset;
+  }
+}
 .form__btn:hover {
-  background: var(--dark-accent);
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--dark-opacity);
+  transition: opacity 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  opacity: 0;
+  padding: 4rem 1rem;
+  max-width: 90rem;
+  transition: all 0.5s;
+}
+.modal.active {
+  top: 0;
+  opacity: 1;
+}
+.modal__body {
+  box-shadow: 0 0 10px 0.5px var(--light-opacity);
+}
+.modal__heading {
+  gap: 2.4rem;
+}
+.modal__heading:not(:last-child) {
+  margin-bottom: 4.8rem;
+}
+@media (max-width: 25em) {
+  .modal__heading:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
+.modal__title {
+  font-size: 2.6rem;
+  line-height: 110%;
+  color: var(--accent);
+  font-weight: 700;
+}
+@media (max-width: 37.5em) {
+  .modal__title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
 }
