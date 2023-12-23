@@ -8,7 +8,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<script defer src="js/modal.js"></script>
+	<script defer src="js/mathInput.js"></script>
 	<script defer src="js/database.js"></script>
+	<script defer src="js/carbonUnitsConverter.js"></script>
 	<script defer src="js/index.js"></script>
 
 	<title>Диабетический калькулятор</title>
@@ -56,7 +59,7 @@
 								<input class="form-result__input" type="number" id="convertBU__bu" disabled placeholder="0 ХЕ">
 							</div>
 							<div class="flex-row">
-								<div class="form__field ">
+								<div class="form__field mathtools">
 									<label class="form__label" for="convertBU__carbo">Сколько yглеводов (на <a
 											class="form__link carbo-unit btn-modal"
 											href="#convertBU__form-settings"><span>100</span> г.</a>
@@ -77,7 +80,7 @@
 											inputmode="numeric">
 									</div>
 								</div>
-								<div class="form__field">
+								<div class="form__field mathtools">
 									<label class="form__label" for="convertBU__carbo-weight">Вес продукта (в граммах)</label>
 									<input class="form__input" type="text" id="convertBU__carbo-weight" placeholder="25" min="1"
 										inputmode="numeric">
@@ -139,76 +142,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="active">
-									<td>Хлеб</td>
-									<td>50</td>
-									<td>1 кусок хлеба (25 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
-								<tr>
-									<td>Пелемени</td>
-									<td>26</td>
-									<td>1 штука (12 г.) = 1 ХЕ</td>
-								</tr>
+
 							</tbody>
 						</table>
 					</div>

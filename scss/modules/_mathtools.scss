@@ -1,0 +1,43 @@
+.mathtools {
+	position: relative;
+
+	&.active {
+		.mathtools__box {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__box {
+		display: flex;
+		position: absolute;
+		bottom: -5.5rem;
+		left: 0;
+		width: 100%;
+		border: 3px solid var(--dark);
+		z-index: 2;
+		border-radius: 10px;
+		overflow: auto;
+		opacity: 0;
+		overflow: hidden;
+		transition: all 0.3s;
+
+		button {
+			color: var(--dark);
+			padding: 1rem;
+			font-size: 2.5rem;
+			font-weight: 500;
+			background: var(--light);
+			border: none;
+			transition: all 0.3s;
+			flex: 1 0 3.5rem;
+
+			&:hover {
+				background: var(--accent);
+			}
+
+			&:not(:last-child) {
+				border-right: 3px solid var(--dark);
+			}
+		}
+	}
+}
