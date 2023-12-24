@@ -6,7 +6,13 @@
 			opacity: 1;
 			visibility: visible;
 		}
+
+		.mathtools__result {
+			opacity: 1;
+			visibility: visible;
+		}
 	}
+
 	&__box {
 		display: flex;
 		position: absolute;
@@ -18,8 +24,9 @@
 		border-radius: 10px;
 		overflow: auto;
 		opacity: 0;
-		overflow: hidden;
+		visibility: hidden;
 		transition: all 0.3s;
+		//height: 100%;
 
 		button {
 			color: var(--dark);
@@ -39,5 +46,24 @@
 				border-right: 3px solid var(--dark);
 			}
 		}
+	}
+
+	&__result {
+		position: absolute;
+		z-index: 3;
+		background: var(--light);
+		border: 2px solid var(--accent);
+		top: -3rem;
+		right: 0;
+		max-width: 5rem;
+		min-width: 8rem;
+		//height: 16px;
+		line-height: 1;
+		padding: 0.5rem;
+		border-bottom: 1px solid var(--dark);
+		color: var(--dark);
+		visibility: hidden;
+		font-size: 1.4rem;
+		opacity: 0;
 	}
 }

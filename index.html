@@ -56,15 +56,15 @@
 								<label class="form__label form-result__label" for="convertBU__bu">Хлебных Единиц (1 ХЕ = <a
 										class="form__link bu-unit btn-modal" href="#convertBU__form-settings"><span>12</span>
 										углеводам</a>)</label>
-								<input class="form-result__input" type="number" id="convertBU__bu" disabled placeholder="0 ХЕ">
+								<input class="form-result__input" type="text" id="convertBU__bu" disabled placeholder="0 ХЕ">
 							</div>
 							<div class="flex-row">
-								<div class="form__field mathtools">
+								<div class="form__field ">
 									<label class="form__label" for="convertBU__carbo">Сколько yглеводов (на <a
 											class="form__link carbo-unit btn-modal"
 											href="#convertBU__form-settings"><span>100</span> г.</a>
 										)</label>
-									<div class="form__field-box flex-row flex-row-center">
+									<div class="form__field-box flex-row flex-row-center mathtools">
 										<button class="btn-database btn-icon btn-modal" type="button" data-modal-href="#database">
 											<svg width="20" height="18" viewBox="0 0 20 18" fill="none"
 												xmlns="http://www.w3.org/2000/svg">
@@ -80,10 +80,12 @@
 											inputmode="numeric">
 									</div>
 								</div>
-								<div class="form__field mathtools">
+								<div class="form__field">
 									<label class="form__label" for="convertBU__carbo-weight">Вес продукта (в граммах)</label>
-									<input class="form__input" type="text" id="convertBU__carbo-weight" placeholder="25" min="1"
-										inputmode="numeric">
+									<div class="form__field-box flex-row mathtools">
+										<input class="form__input" type="text" id="convertBU__carbo-weight" placeholder="25"
+											min="1" inputmode="numeric">
+									</div>
 								</div>
 							</div>
 							<button class="form__btn" type="submit" id="convertBU__btn">Конвертировать</button>
