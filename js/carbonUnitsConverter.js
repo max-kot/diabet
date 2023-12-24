@@ -1,3 +1,4 @@
+
 const convertBUForm = document.querySelector('.convertBU__form');
 let convertBUSettingsCarbo = document.querySelector('#convertBU__carbo-default');
 let convertBUSettingsBU = document.querySelector('#convertBU__bu-default');
@@ -18,11 +19,11 @@ convertBUForm.addEventListener('submit', (e) => {
 	let inputCarboWeight = convertBUForm.querySelector('#convertBU__carbo-weight');
 	let inputBU = convertBUForm.querySelector('#convertBU__bu');
 
-	const carboResult = (inputCarboWeight.value * inputCarbo.value) / carboDefault;
+	const carboResult = (eval(inputCarboWeight.value) * eval(inputCarbo.value)) / carboDefault;
 
 	const buResult = (carboResult / buDefault).toFixed(1);
 
-	inputBU.value = buResult
+	inputBU.value = `${buResult} ХЕ`;
 })
 
 convertBUSettingForm.addEventListener('submit', (e) => {

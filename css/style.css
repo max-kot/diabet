@@ -5,6 +5,10 @@
   opacity: 1;
   visibility: visible;
 }
+.mathtools.active .mathtools__result {
+  opacity: 1;
+  visibility: visible;
+}
 .mathtools__box {
   display: flex;
   position: absolute;
@@ -16,7 +20,7 @@
   border-radius: 10px;
   overflow: auto;
   opacity: 0;
-  overflow: hidden;
+  visibility: hidden;
   transition: all 0.3s;
 }
 .mathtools__box button {
@@ -34,6 +38,23 @@
 }
 .mathtools__box button:not(:last-child) {
   border-right: 3px solid var(--dark);
+}
+.mathtools__result {
+  position: absolute;
+  z-index: 3;
+  background: var(--light);
+  border: 2px solid var(--accent);
+  top: -3rem;
+  right: 0;
+  max-width: 5rem;
+  min-width: 8rem;
+  line-height: 1;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--dark);
+  color: var(--dark);
+  visibility: hidden;
+  font-size: 1.4rem;
+  opacity: 0;
 }
 
 :root {
@@ -158,7 +179,7 @@ body {
   transition: all 0.5s;
   width: 5rem;
   height: 5rem;
-  flex: 0 1 5rem;
+  flex: 0 0 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,7 +238,7 @@ body {
   gap: 1rem;
   position: relative;
 }
-.form__field-box button {
+.form__field-box .btn-database {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -264,6 +285,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 5;
   background: var(--dark-opacity);
   transition: opacity 0.3s;
   visibility: hidden;
